@@ -1,22 +1,56 @@
 /* News.css */
 
+
+/* Container Styling */
+
 .container {
     padding: 20px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.8);
-    /* Light semi-transparent */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 .dark-mode .container {
     background: rgba(34, 34, 34, 0.8);
-    /* Dark semi-transparent */
 }
+
+
+/* Heading Styling */
 
 h2 {
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+/* Responsive Grid Layout for News Items */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-md-4 {
+    flex: 1 1 30%;
+    /* Allow three columns on larger screens */
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 100%;
+        /* Full width on smaller screens */
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding: 15px;
+    }
 }
 
 
@@ -35,4 +69,26 @@ h2 {
 .btn-light:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .btn-dark,
+    .btn-light {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Center the button container on smaller screens */
+
+.container.d-flex.justify-content-between {
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .container.d-flex.justify-content-between {
+        justify-content: space-between;
+    }
 }
