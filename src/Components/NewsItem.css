@@ -1,0 +1,52 @@
+/* NewsItem.css */
+
+.news-item-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item-card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Card Image with Zoom on Hover */
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.news-item-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+
+/* Card Title with Soft Glow */
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-item-card:hover .card-title {
+    color: #007bff;
+    text-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+
+/* Card Button with Outline Hover Effect */
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}

@@ -1,0 +1,27 @@
+/* App.css */
+
+
+/* Light and Dark Mode Backgrounds */
+
+.light-mode {
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    /* soft blue-gray gradient */
+    color: #000;
+}
+
+.dark-mode {
+    background: linear-gradient(to right, #141e30, #243b55);
+    /* dark navy gradient */
+    color: #fff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Smooth transitions */
+
+body,
+.container,
+.navbar,
+.btn {
+    transition: all 0.3s ease;
+}

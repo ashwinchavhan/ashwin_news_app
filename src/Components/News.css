@@ -1,0 +1,38 @@
+/* News.css */
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    /* Light semi-transparent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .container {
+    background: rgba(34, 34, 34, 0.8);
+    /* Dark semi-transparent */
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 3D Button Effect */
+
+.btn-dark,
+.btn-light {
+    background-color: transparent;
+    border: 2px solid currentColor;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-dark:hover,
+.btn-light:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
