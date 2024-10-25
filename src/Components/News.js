@@ -14,12 +14,16 @@ const News = ({ category, isDarkMode }) => {
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      // const apiKey = process.env.REACT_APP_NEWS_API_KEY;
-      let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&page=${page}&pageSize=${pageSize}&apiKey=abc49526e0574544bde4841b4fce1f04`;
-      let data = await fetch(url);
-      let parsedData = await data.json();
-      setArticles(parsedData.articles || []);
-      setTotalResults(parsedData.totalResults);
+      const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+      let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&page=${page}&pageSize=${pageSize}&apiKey=${apiKey}`;
+      try {
+        let data = await fetch(url);
+        let parsedData = await data.json();
+        setArticles(parsedData.articles || []);
+        setTotalResults(parsedData.totalResults);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
       setLoading(false);
     };
 
